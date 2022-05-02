@@ -9,7 +9,7 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 id = 0
 
 # add the list of names of your dataset here
-names = ['None','Ramdev','Sadhguru','Nirmalbaba',"Shubham"] 
+names = ['None','Ramdev','Sadhguru','Nirmalbaba'] 
 
 
 cam = cv2.VideoCapture(0)
@@ -22,7 +22,7 @@ while True:
     faces = faceCascade.detectMultiScale( 
         gray,
         scaleFactor = 1.2,
-        minNeighbors = 5
+        minNeighbors = 10
        )
     for(x,y,w,h) in faces:
         cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 2)

@@ -41,7 +41,7 @@ def take_img():
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
                 # break if the sample number is morethan 100
-        elif sampleNum > 200:
+        elif sampleNum > 300:
             break
     cam.release()
     cv2.destroyAllWindows()
@@ -117,7 +117,7 @@ window.protocol("WM_DELETE_WINDOW", on_closing)
 
 Notification = tk.Label(window, text="All things good", bg="Black", fg="white", width=15, height=3)
 
-lbl = tk.Label(window, text="Enter id", width=20, height=2, fg="black", font=('times', 15, 'italic bold '))
+lbl = tk.Label(window, text="Enter ID", width=20, height=2, fg="black", font=('times', 15, 'italic bold '))
 lbl.place(x=200, y=200)
 
 def testVal(inStr,acttyp):
