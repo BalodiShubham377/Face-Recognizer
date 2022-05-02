@@ -22,7 +22,7 @@ while True:
     faces = faceCascade.detectMultiScale( 
         gray,
         scaleFactor = 1.2,
-        minNeighbors = 10
+        minNeighbors = 5
        )
     for(x,y,w,h) in faces:
         cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 2)
